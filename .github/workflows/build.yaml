@@ -14,6 +14,6 @@ jobs:
       - name: Check Dotnet CLI 
         run: dotnet build
       - name: List files in directory
-        run: ls BeanBag.Api -r
+        run: ls BeanBag.Api -R
       - name: Check NPM CLI
         run: npm -v
