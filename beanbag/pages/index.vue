@@ -21,7 +21,7 @@
             </a>.
           </p>
           <p>
-            If you have questions, please join the officialdsafdsafsdafsdafsadfasd <a
+            If you have questions, please join the official <a
               href="https://chat.vuetifyjs.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,6 @@
             rel="noopener noreferrer"
           >
             Nuxt GitHub
-            sdafasdfsadfsadfasdf
           </a>
         </v-card-text>
         <v-card-actions>
