@@ -29,6 +29,9 @@ public class ProductStore
         existing.Name = product.Name;
         existing.Price = product.Price;
         existing.Stock = product.Stock;
+        existing.Width = product.Width;
+        existing.Height = product.Height;
+        existing.Depth = product.Depth;
     }
     
     public void Remove(Product product)
