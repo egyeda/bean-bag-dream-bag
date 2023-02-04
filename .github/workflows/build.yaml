@@ -1,0 +1,20 @@
+﻿name: Build my application
+
+on: [push]
+
+jobs:
+  build:
+    name: Build the app
+    runs-on: ubuntu-latest
+    steps:
+#    - uses: actions/checkout@v2
+#    - name: Build my application
+#      run: |
+#        dotnet build --configuration Release
+#    - name: Run my application
+#      run: |
+#        dotnet run --project src/MyApplication/MyApplication.csproj
+    - name: Print current directory
+      run: pwd
+    - name: List files in directory
+      run: ls
