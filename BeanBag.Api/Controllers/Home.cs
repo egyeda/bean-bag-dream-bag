@@ -2,7 +2,7 @@
 
 namespace BeanBag.Api.Controllers;
 
-public class Home : Controller
+public class Home : ControllerBase
 {
     [HttpGet]
     [Route("api/home")]
