@@ -7,14 +7,9 @@ jobs:
     name: Build the app
     runs-on: ubuntu-latest
     steps:
-#    - uses: actions/checkout@v2
-#    - name: Build my application
-#      run: |
-#        dotnet build --configuration Release
-#    - name: Run my application
-#      run: |
-#        dotnet run --project src/MyApplication/MyApplication.csproj
-    - name: Print current directory
-      run: pwd
-    - name: List files in directory
-      run: ls
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Print current directory
+        run: pwd
+      - name: List files in directory
+        run: ls
