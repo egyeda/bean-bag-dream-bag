@@ -39,8 +39,33 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/i18n',
   ],
-
+  i18n: {
+    lazy: true,
+    langDir: 'lang',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    locales: [
+      {
+        code: 'en',
+        Name: 'English',
+        file: 'en-US.json'
+      },
+      {
+        code: 'hu',
+        Name: 'Magyar',
+        file: 'hu-HU.json'
+      },
+      {
+        code: 'ro',
+        Name: 'Română',
+        file: 'ro-RO.json'
+      }
+    ],
+  },
   axios:
   {
     // baseURL: 'http://localhost:3000/api'

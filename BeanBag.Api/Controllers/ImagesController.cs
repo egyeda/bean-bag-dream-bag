@@ -12,6 +12,15 @@ public class ImagesController : ControllerBase
         _env = env;
     }
     
+    [HttpGet("{image}")]
+    public IActionResult GetImage(string image)
+    {
+        var path = Path.Combine(_env.WebRootPath, image);
+        var mime = image.Split('.').Last();
+        
+        return PhysicalFile(path, $"image/{mime}");
+    }
+    
     [HttpPost]
     public async Task<IActionResult> UploadImage(IFormFile image)
     {
@@ -24,6 +33,6 @@ public class ImagesController : ControllerBase
             await image.CopyToAsync(fileStream);
         }
         
-        return Ok();
+        return Ok(fileName);
     }
 }
