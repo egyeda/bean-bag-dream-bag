@@ -74,7 +74,7 @@ import {mapState, mapActions, mapMutations} from "vuex";
 export default {
   name: "product-upload",
   computed: {
-    ...mapState('images', ['uploadPromise', 'active', 'step']),
+    ...mapState('image-upload', ['uploadPromise', 'active', 'step']),
   },
   data: () => ({
     productName: '',
@@ -83,8 +83,8 @@ export default {
     file: undefined,
   }),
   methods: {
-    ...mapMutations('images', ['reset', 'toggleActivity', 'increaseStep']),
-    ...mapActions('images', ['startImageUpload', 'createProduct']),
+    ...mapMutations('image-upload', ['reset', 'toggleActivity', 'increaseStep']),
+    ...mapActions('image-upload', ['startImageUpload', 'createProduct']),
     async handleFileChange(file) {
       if (!file) {
         return

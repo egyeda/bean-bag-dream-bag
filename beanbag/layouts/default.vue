@@ -42,7 +42,7 @@
 
 <script>
 
-import {mapMutations, mapState} from "vuex";
+import {mapMutations} from "vuex";
 import ProductUpload from "../components/product-upload.vue";
 
 export default {
@@ -50,11 +50,8 @@ export default {
   components: {
     ProductUpload,
   },
-  computed: {
-    ...mapState('images', ['active']),
-  },
   methods:{
-    ...mapMutations('images', ['toggleActivity']),
+    ...mapMutations('image-upload', ['toggleActivity']),
   }
 }
 </script>
