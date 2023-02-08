@@ -1,26 +1,66 @@
 <template>
-  <v-app dark>
-    <nuxt-link
-      :key="'en'"
-      :to="switchLocalePath('en')">English</nuxt-link>
-    <nuxt-link
-      :key="'ro'"
-      :to="switchLocalePath('ro')">Română</nuxt-link>
-    <nuxt-link
-      :key="'hu'"
-      :to="switchLocalePath('hu')">Magyar</nuxt-link>
+  <v-app>
+    <v-app-bar
+        app
+        dense
+      >
+        <v-toolbar-title>Dreambags</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        <nuxt-link
+          :key="'gb'"
+          class="country-flag"
+          :to="switchLocalePath('en')">
+          <country-flag country='gb'
+               size="normal"
+               :rounded="true"/></nuxt-link>
+        <nuxt-link
+          :key="'hu'"
+          class="country-flag"
+          :to="switchLocalePath('hu')">
+          <country-flag country='hu'
+               size="normal"
+               :rounded="true"/></nuxt-link>
+        <nuxt-link
+          :key="'ro'"
+          class="country-flag"
+          :to="switchLocalePath('ro')">
+          <country-flag country='ro'
+               :rounded="true"
+               size="normal"/></nuxt-link>
+        <v-btn depressed @click="toggleActivity">
+          Upload
+        </v-btn>
+      </v-app-bar>
+    <product-upload></product-upload>
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
   </v-app>
 </template>
 
 <script>
+
+import {mapMutations, mapState} from "vuex";
+import ProductUpload from "../components/product-upload.vue";
+
 export default {
   name: 'DefaultLayout',
+  components: {
+    ProductUpload,
+  },
   computed: {
+    ...mapState('images', ['active']),
+  },
+  methods:{
+    ...mapMutations('images', ['toggleActivity']),
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.country-flag {
+  margin: 0 0.5rem;
+}
+</style>
