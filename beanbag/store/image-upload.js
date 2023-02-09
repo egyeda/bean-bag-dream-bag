@@ -30,8 +30,4 @@ export const actions = {
     const task = this.$axios.$post('/api/images', form)
     commit('setTask', {task})
   },
-  async createProduct({ commit, dispatch }, {product}) {
-    await this.$axios.$post('/api/products', product)
-    dispatch("fetchProducts")
-  }
 }

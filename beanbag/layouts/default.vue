@@ -29,11 +29,8 @@
           <country-flag country='ro'
                :rounded="true"
                size="normal"/></nuxt-link>
-        <v-btn depressed @click="toggleActivity">
-          Upload
-        </v-btn>
+        <product-upload></product-upload>
       </v-app-bar>
-    <product-upload></product-upload>
     <v-main>
       <Nuxt />
     </v-main>

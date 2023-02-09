@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanBag.Api", "BeanBag.Api\BeanBag.Api.csproj", "{D2FF9A9B-84E9-436E-9CC9-F8A9C9DAE81F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanBag.Data", "BeanBag.Data\BeanBag.Data.csproj", "{AFF8B08B-2E55-4D98-A275-C2E7A9030197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeanBag.Models", "BeanBag.Models\BeanBag.Models.csproj", "{1E11F439-4027-4C9B-8B43-59DCCB39EA9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{D2FF9A9B-84E9-436E-9CC9-F8A9C9DAE81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2FF9A9B-84E9-436E-9CC9-F8A9C9DAE81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2FF9A9B-84E9-436E-9CC9-F8A9C9DAE81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF8B08B-2E55-4D98-A275-C2E7A9030197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF8B08B-2E55-4D98-A275-C2E7A9030197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF8B08B-2E55-4D98-A275-C2E7A9030197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF8B08B-2E55-4D98-A275-C2E7A9030197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E11F439-4027-4C9B-8B43-59DCCB39EA9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E11F439-4027-4C9B-8B43-59DCCB39EA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E11F439-4027-4C9B-8B43-59DCCB39EA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E11F439-4027-4C9B-8B43-59DCCB39EA9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

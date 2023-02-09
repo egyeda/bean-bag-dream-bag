@@ -1,6 +1,10 @@
 ﻿<template>
-
   <v-dialog persistent :value="active" @change="toggleActivity">
+    <template v-slot:activator="{ on }">
+      <v-btn depressed v-on="on" @click="toggleActivity">
+        Upload
+      </v-btn>
+    </template>
     <v-card>
       <v-card-title>
         <span class="headline">Upload</span>
@@ -84,7 +88,8 @@ export default {
   }),
   methods: {
     ...mapMutations('image-upload', ['reset', 'toggleActivity', 'increaseStep']),
-    ...mapActions('image-upload', ['startImageUpload', 'createProduct']),
+    ...mapActions('image-upload', ['startImageUpload']),
+    ...mapActions('products', ['createProduct']),
     async handleFileChange(file) {
       if (!file) {
         return
