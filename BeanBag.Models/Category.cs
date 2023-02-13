@@ -1,6 +1,6 @@
-﻿namespace BeanBag.Api.Models;
+﻿namespace BeanBag.Models;
 
-public class Category : BaseModel
+public class Category : BaseModel<int>
 {
     public string Name { get; set; }
     public string Image { get; set; }

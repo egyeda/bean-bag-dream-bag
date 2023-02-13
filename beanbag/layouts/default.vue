@@ -31,7 +31,7 @@
                size="normal"/></nuxt-link>
         <product-upload></product-upload>
       </v-app-bar>
-    <v-main>
+    <v-main >
       <Nuxt />
     </v-main>
   </v-app>

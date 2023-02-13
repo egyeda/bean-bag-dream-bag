@@ -11,7 +11,5 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit, dispatch }) {
-    await dispatch("products/fetchProducts")
-    await dispatch("categories/fetchCategories")
   }
 }

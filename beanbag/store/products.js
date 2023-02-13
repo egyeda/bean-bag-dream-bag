@@ -1,10 +1,14 @@
 ﻿const initState = () => ({
+  product: {},
   products: [],
 })
 
 export const state = initState
 
 export const mutations = {
+  setProduct(state, {product}) {
+    state.product = product
+  },
   setProducts(state, {products}) {
     state.products = products
   },
@@ -14,6 +18,10 @@ export const mutations = {
 }
 
 export const actions = {
+  async fetchProduct({ commit }, {productId}) {
+    const product = await this.$axios.$get('http://localhost:5000/api/products/' + productId)
+    commit("setProduct", {product})
+  },
   async fetchProducts({ commit }) {
     const products = await this.$axios.$get('http://localhost:5000/api/products')
     commit("setProducts", {products})

@@ -1,15 +1,18 @@
 <template>
-  <div style="height: 1500px">
+  <div class="app-container">
     <h1>{{ $t('products') }}</h1>
 
-    <div v-for="product in products" :key="product.id">
-      <div>
-        {{ product.name }}
-        <div>
-          <img :src="`http://localhost:5000/api/images/${product.image}`" alt="product image" width="400">
+    <v-row >
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" v-for="product in products" :key="product.id">
+
+        <div @click="$router.push(`products/${product.id}`)">
+          <div class="d-flex justify-center" >
+            <img :src="`http://localhost:5000/api/images/${product.image}`" alt="product image" width="200" height="200">
+          </div>
+          <p>{{ product.name }}</p>
         </div>
       </div>
-    </div>
+    </v-row>
   </div>
 </template>
 
@@ -21,9 +24,18 @@ export default {
   computed: {
     ...mapState('products', ['products']),
   },
+  async fetch(){
+    await this.$store.dispatch('products/fetchProducts')
+  }
 }
 </script>
 
 <style scoped>
+.product{
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
 
 </style>

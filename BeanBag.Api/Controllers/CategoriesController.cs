@@ -1,4 +1,4 @@
-﻿using BeanBag.Api.Models;
+﻿using BeanBag.Models;
 using BeanBag.Data;
 using Microsoft.AspNetCore.Mvc;
 
