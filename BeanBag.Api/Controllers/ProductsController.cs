@@ -53,6 +53,11 @@ public class ProductsController : ControllerBase
     {
         var product = _appDbContext.Products.FirstOrDefault(p => p.Id == id);
         
+        if (product == null)
+        {
+            return NotFound();
+        }
+
         product.Deleted = true;
         await _appDbContext.SaveChangesAsync();
         
